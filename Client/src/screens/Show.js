@@ -20,8 +20,8 @@ function Show() {
 
   return (
     <div className="showPage">
-      <Link to="/">Home</Link>
-      <div className="list"> 
+      <div className="showList"> 
+      <Link to="/"><button className='button'>Home</button></Link>
         <h1>Entry: {show.entry}</h1>
         <p>Status: {show.status}</p>
        

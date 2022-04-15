@@ -91,6 +91,7 @@ function App() {
                     return (
                       <div className='listItem'>
                         <Link to={`/items/${item._id}`}><li style={{ textDecoration: 'line-through' }}>{item.entry}</li></Link>
+                        <button className='button' onClick={() => { handleClick("to-do", item._id) }}>Undo</button>
                         <button onClick={() => { handleDelete(item._id) }} className="button">Delete</button>
                       </div>
                     )
