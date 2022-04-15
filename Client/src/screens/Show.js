@@ -21,7 +21,7 @@ function Show() {
   return (
     <div className="showPage">
       <Link to="/">Home</Link>
-      <div className="taskContainer"> 
+      <div className="list"> 
         <h1>Entry: {show.entry}</h1>
         <p>Status: {show.status}</p>
        

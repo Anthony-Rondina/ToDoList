@@ -9,9 +9,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={ <Layout /> }>
-        <Route index element={ <App />} />
-        <Route path=":id" element={ <Show /> } />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<App />} />
+        <Route path="/items/:id" element={<Show />} />
       </Route>
     </Routes>
   </Router>

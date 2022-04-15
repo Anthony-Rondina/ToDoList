@@ -64,9 +64,9 @@ function App() {
         <div id="to-do" className="section">
           <div className="list">
             <h1>My To Do List:</h1>
+            <p className='newItem'>New Item</p>
             <form onSubmit={handleSubmit}>
-              <input type="text" ref={entry} />
-              <input type="submit" value="submit" />
+              <input placeholder='Enter new item' type="text" ref={entry} />
             </form>
             <p>To do items:</p>
             <ul>
@@ -74,9 +74,9 @@ function App() {
                 items["to-do"] ?
                   items["to-do"].map((item, idx) => {
                     return (
-                      <>
-                        <li>{item.entry}</li>
-                        <button onClick={() => { handleClick("completed", item._id) }} className="button">Complete</button> </>
+                      <div className='listItem'>
+                        <Link to={`/items/${item._id}`}><li>{item.entry}</li></Link>
+                        <button onClick={() => { handleClick("completed", item._id) }} className="button">Complete</button> </div>
                     )
                   })
                   :
@@ -89,8 +89,8 @@ function App() {
                 items["completed"] ?
                   items["completed"].map((item, idx) => {
                     return (
-                      <div>
-                        <li style={{ textDecoration: 'line-through' }}>{item.entry}</li>
+                      <div className='listItem'>
+                        <Link to={`/items/${item._id}`}><li style={{ textDecoration: 'line-through' }}>{item.entry}</li></Link>
                         <button onClick={() => { handleDelete(item._id) }} className="button">Delete</button>
                       </div>
                     )
