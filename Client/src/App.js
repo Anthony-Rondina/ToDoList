@@ -76,7 +76,8 @@ function App() {
                     return (
                       <div className='listItem'>
                         <Link to={`/items/${item._id}`}><li>{item.entry}</li></Link>
-                        <button onClick={() => { handleClick("completed", item._id) }} className="button">Complete</button> </div>
+                        <button onClick={() => { handleClick("completed", item._id) }} className="button">Complete</button>
+                        <button onClick={() => { handleDelete(item._id) }} className="button">Delete</button> </div>
                     )
                   })
                   :
