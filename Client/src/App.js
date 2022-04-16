@@ -84,7 +84,7 @@ function App() {
                   ""
               }
             </ul>
-            <p>Completed Items:</p>
+            <Link to={`/`}><p>Completed Items:</p></Link>
             <ul>
               {
                 items["completed"] ?
@@ -103,51 +103,7 @@ function App() {
             </ul>
           </div>
         </div>
-        {/* <div id="pending" className="section">
-          <h2>Pending</h2>
-          <div className="list">
-            {
-              items["pending"] ?
-                items["pending"].map((item, idx) => {
-                  return (
-                    <div className="task" key={idx}>
-                      <Link to={`/${item._id}`}>{item.entry}</Link>
-                      <div>
-                        <button onClick={() => { handleClick("to-do", item._id) }} className="button">to-do</button>
-                        <button onClick={() => { handleClick("completed", item._id) }} className="button">Completed</button>
-                      </div>
-                    </div>
-                  )
-                })
-                :
-                ""
-            }
-          </div>
-        </div>
-        <div id="completed" className="section">
-          <h2>Completed</h2>
-          <div className="list">
-            {
-
-              items["completed"] ?
-                items["completed"].map((item, idx) => {
-                  return (
-                    <div className="task" key={idx}>
-                      <Link style={{ textDecoration: 'line-through' }}to={`/${item._id}`}>{item.entry}</Link>
-                      <div>
-                        <button onClick={() => { handleClick("pending", item._id) }} className="button">Pending</button>
-                        <button onClick={() => { handleClick("to-do", item._id) }} className="button">to-do</button>
-                      </div>
-                    </div>
-                  )
-                })
-                :
-                ""
-            }
-          </div>
-        </div> */}
       </div>
-
     </div>
   );
 }
