@@ -1,7 +1,7 @@
-https://guileless-buttercream-553226.netlify.app/
 
-[screenshot](https://i.imgur.com/i2w3yMk.png)
-
+[Link to Project](https://guileless-buttercream-553226.netlify.app/
+)
+![screenshot](https://i.imgur.com/i2w3yMk.png)
 Technologies Used:
 
 1. MongoDB
