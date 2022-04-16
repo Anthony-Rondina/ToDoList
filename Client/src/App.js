@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("http://localhost:3001/items/table")
+        const response = await axios.get("https://anthonystodobackend.herokuapp.com/items/table")
         setItems(response.data)
 
       } catch (err) {
@@ -22,7 +22,7 @@ function App() {
 
   const handleClick = async (statusChange, id) => {
     try {
-      const response = await axios.put(`http://localhost:3001/items/${id}`, {
+      const response = await axios.put(`https://anthonystodobackend.herokuapp.com/items/${id}`, {
         status: statusChange
       })
 
@@ -38,7 +38,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/items/", {
+      const response = await axios.post("https://anthonystodobackend.herokuapp.com/items/", {
         entry: entry.current.value, status: "to-do".toLowerCase()
       })
     } catch (err) {
@@ -47,7 +47,7 @@ function App() {
   }
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3001/items/${id}`, {
+      const response = await axios.delete(`https://anthonystodobackend.herokuapp.com/items/${id}`, {
       })
       if (response.status === 200) {
         setButtonPressed(!buttonPressed)
@@ -84,7 +84,7 @@ function App() {
                   ""
               }
             </ul>
-            <Link to={`/`}><p>Completed Items:</p></Link>
+            <p>Completed Items:</p>
             <ul>
               {
                 items["completed"] ?
